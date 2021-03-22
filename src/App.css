@@ -1,0 +1,357 @@
+.App{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  flex-direction:column;
+}
+
+
+/*----------------NAVS---------------------*/
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 50px;
+  width: 100%;
+  background: rgb(73, 79, 82);
+  color: white;
+}
+
+.nav-links{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  height: 100px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  right: 0;
+  transition: all 0.5s ease;
+}
+.nav-links a div{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  height: 30px;
+}
+.nav-links a div span{
+  background-color: white;
+  width: 100%;
+  height: 1px;
+  transition: all 0.5s ease;
+  position:absolute;
+  
+}
+.nav-links a div .link-top{
+  left: 0;
+  top: 0;
+}
+.nav-links a div .link-bottom{
+  bottom: 0;
+  right: 0;
+}
+.nav-links a li{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  height: 20px;
+}
+
+.nav-links a:hover div:hover .link-top{
+  left: -100%;
+}
+.nav-links a:hover div:hover .link-bottom{
+  right: 100%;
+}
+
+
+/*---------------------------HOME----------------------------*/
+.Home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Home h1{
+  width: 300px;
+  text-align: center;
+}
+
+/*----------form-------------*/
+
+.Home form{
+  background-color:white;
+  height: 50px;
+  width: 400px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  border-bottom: 1px solid black;
+  position: relative;
+  align-self: center;
+  justify-self: center;
+}
+.Home form input[type=text]{
+  height: 90%;
+  width: 60%;
+  outline: 0;
+  border: none;
+  left: 10px;
+  margin-right: 10px;
+}
+.Home form input[type=submit]{
+  height: 60%;
+  width: 30%;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: gray;
+  right: 10px;
+  transition: all 0.5s ease;
+}
+form input[type=submit]:hover{
+  background-color: rgb(29, 32, 43);
+  color: white;
+}
+
+
+
+
+/*------------User Card--------------*/
+.UserCard{
+  width: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  border: 1px solid;
+  box-shadow: 5px 10px 8px #888888;
+  position: relative;
+}
+.UserCard .user-info{
+  width: 100%;
+  height: 300px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+}
+
+/*user-data*/
+.user-info .user-data{
+  height: 100px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 5px;
+}
+.user-data .user{
+  position: absolute;
+  left: 115px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+.user .user-user-value{
+  position: relative;
+  border-top: 1px solid white;
+  height: 40px;
+}
+.user .user-user-value p{
+  position: absolute;
+  height: 15px;
+  width: 100px;
+  font-size:10px;
+  margin: 0;
+  top: -5px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.user .user-user-value h3{
+  position: absolute;
+  top: 15px;
+  font-size: 14px;
+  height: 20px;
+  margin: 0;
+  padding-left: 20px;
+}
+.user-data img{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 10px;
+}
+
+/*user-extra*/
+.user-info .user-extra{
+  margin-top: 10px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.user-extra .user-followers{
+  color: white;
+  margin-left: 10px;
+  font-size: 10px;
+  width: 100px;
+}
+.user-followers p{
+  border-bottom: 1px solid white;
+}
+.user-extra .user-for-hire{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom: 1px solid white;
+  color: white;
+  width: 100px;
+  margin-left: 10px;
+  font-size: 10px;
+}
+.user-for-hire div{
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+}
+.user-for-hire div p{
+  width: 50%;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.user-for-hire div:hover p.hire-change-transparent{
+  width: 0;
+  text-decoration: line-through;
+}
+.user-for-hire div:hover p.hire-change-green{
+  width: 100%;
+}
+.user-for-hire div:hover p.hire-change-red{
+  width: 100%;
+}
+
+.user-for-hire div p.hire-change-transparent{
+  background-color: transparent;
+}
+.user-for-hire div p.hire-change-green{
+  background-color: green;
+}
+
+.user-for-hire div p.hire-change-red{
+  background-color: red;
+}
+
+/*user-github*/
+.user-info .user-github{
+  background-color: transparent;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  height: 100px;
+}
+.user-github button{
+  height: 60px;
+  width: 100px;
+  color: white;
+  position: relative;
+  padding: 0;
+  height: 80px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.user-github button:hover{
+  background-color: rgba(0,0,0, 0.5);
+}
+.user-github .btn-account{
+  background: url(/src/images/github_50.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  outline: none;
+}
+.user-github .btn-repository{
+  background: url(/src/images/repository_50.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  outline: none;
+  font-size: 12px;
+}
+
+.user-github button p{
+  position:absolute;
+  vertical-align: text-bottom;
+  right: 10px;
+  left: 10px;
+  bottom: 0;
+}
+
+
+
+/*--user-non-info--*/
+.user-non-info{
+  width: 100%;
+  height: 100px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+.user-non-info div{
+  position: relative;
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.user-non-info div span{
+  position: absolute;
+  background-color: rgb(61, 64, 77);
+  width: 300px;
+  height: 30px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.user-non-info div span:nth-child(1){
+  left: 0;
+}
+.user-non-info div span:nth-child(2){
+  left: 100%;
+  border-bottom: 1px solid white;
+}
+
+.user-non-info div:hover span{
+  left: -100%;
+}
+.user-non-info div:hover span:nth-child(2){
+  left: 0;
+}
+
